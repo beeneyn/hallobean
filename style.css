@@ -165,3 +165,10 @@ footer {
   font-family: Arial, sans-serif; /* Use a more readable font for buttons */
   transition: all 0.2s ease-in-out;
 }
+
+.social-button:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+  transform: scale(1.05) rotate(-2deg); /* Adds a little tilt on hover */
+  box-shadow: 4px 4px 0 #000;
+}
