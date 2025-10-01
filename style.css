@@ -1,0 +1,167 @@
+body {
+  font-family: 'Creepster', cursive; /* A spooky font, you may need to import it from Google Fonts */
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #ff6600;
+  padding: 20px;
+  border-bottom: 5px solid #000000;
+}
+
+.logo {
+  width: 1000px;
+  height: auto;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px 50px; /* Added more horizontal padding */
+  max-width: 1200px;  /* Added max-width for better layout on large screens */
+  margin: 0 auto;     /* Center the main content */
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Styles for character profiles */
+.character-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Adds space between image and text */
+  margin-top: 35px;
+  text-align: left; /* Aligns text to the left within its container */
+}
+
+.character-profile img {
+  border: 4px solid #ff6600;
+  border-radius: 15px;
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.character-info {
+  max-width: 600px; /* Prevents text lines from being too long */
+}
+
+/* Specific image sizes */
+#host .character-profile img {
+  width: 250px;
+  height: auto;
+}
+
+#contestants .character-profile img {
+  width: 200px;
+  height: auto;
+}
+
+/* Styles for episode cards */
+.episode-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border: 3px solid #ff6600;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: left;
+  background-color: #2a2a2a;
+  max-width: 800px;
+}
+
+.episode-thumbnail {
+  width: 280px;
+  height: 180px;
+  object-fit: cover; /* Ensures the image fits well */
+  border: 3px solid #ff6600;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.episode-info h3 {
+  margin-top: 0;
+  color: #ff6600;
+}
+
+/* Styles for episode buttons */
+.episode-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+.episode-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  text-shadow: none; /* Make button text clearer */
+  font-family: Arial, sans-serif; /* Use a more readable font for buttons */
+  transition: all 0.2s ease-in-out;
+}
+
+.episode-button:hover {
+  background-color: #ffffff;
+  color: #ff6600;
+  transform: scale(1.05) rotate(-2deg); /* Adds a little tilt on hover */
+  box-shadow: 4px 4px 0 #000;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+footer {
+    background-color: #141414;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#seperator {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 1000px;
+}
+
+.social-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff4235;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  text-shadow: none; /* Make button text clearer */
+  font-family: Arial, sans-serif; /* Use a more readable font for buttons */
+  transition: all 0.2s ease-in-out;
+}
