@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Voting Poll</title>
+    <link rel="stylesheet" href="voting.css">
+</head>
+<body>
+
+    <div class="poll-container">
+        <h2 id="poll-question">Vote who you think should be eliminated</h2>
+        <form id="poll-form">
+            <div class="poll-option">
+                <input type="radio" name="pollOption" id="option1" value="Zombean">
+                <label for="option1">Zombean</label>
+            </div>
+            <div class="poll-option">
+                <input type="radio" name="pollOption" id="option2" value="Ghost Bean">
+                <label for="option2">Ghost Bean</label>
+            </div>
+            <div class="poll-option">
+                <input type="radio" name="pollOption" id="option3" value="Bean-O-Lantern">
+                <label for="option3">Bean-O-Lantern</label>
+            </div>
+            <div class="poll-option">
+                <input type="radio" name="pollOption" id="option4" value="Candy Beansket">
+                <label for="option4">Candy Beansket</label>
+            </div>
+            <button type="submit">Vote</button>
+        </form>
+        
+        <div id="results-container">
+            <h3>Results</h3>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyA6mpV3XEBbFxl20x06yrTjoD4meXrDu5k",
+        authDomain: "hallobean-voting.firebaseapp.com",
+        projectId: "hallobean-voting",
+        storageBucket: "hallobean-voting.appspot.com", // Corrected this line from your previous file
+        messagingSenderId: "332478993593",
+        appId: "1:332478993593:web:69cc4b2a30ac4d12c87768",
+        measurementId: "G-9V4RLMSFMF"
+      };
+
+      // Initialize Firebase and create the global 'db' variable for voting.js to use
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+
+    <script src="voting.js"></script>
+
+</body>
+</html>

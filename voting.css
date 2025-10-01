@@ -1,0 +1,138 @@
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Define the color variables for the dark theme */
+:root {
+  --body-bg: #18191a;
+  --container-bg: #242526;
+  --text-color: #e4e6eb;
+  --border-color: #444;
+  --hover-bg: #3a3b3c;
+  --selected-text: white;
+  --progress-bar-bg: #3a3b3c;
+  --primary-color: #ff6600;
+  --primary-hover: #e64100;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.poll-container {
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    color: var(--text-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.poll-option {
+    margin-bottom: 12px;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.poll-option:hover {
+    background-color: var(--hover-bg);
+}
+
+.poll-option.selected {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--selected-text);
+}
+
+.poll-option label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+button:disabled {
+    background-color: #555; 
+    color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#results-container {
+    margin-top: 30px;
+}
+
+#thank-you-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #28a745;
+    font-weight: 600;
+}
+
+.result-item {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: var(--progress-bar-bg);
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    height: 28px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #28a745;
+    width: 0%;
+    transition: width 0.8s ease-in-out;
+}
+
+.result-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; /* THE FIX IS HERE */
+}
